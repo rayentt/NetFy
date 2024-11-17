@@ -1,0 +1,714 @@
+/* Styles généraux pour le body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("../_images/bg-net.jpeg");
+    background-size: cover;
+}
+
+/* Style de la navbar */
+.navbar {
+    background-color:transparent; /* Couleur de fond */
+    padding: 10px 20px; /* Espacement interne */
+}
+
+/* Liste de la navbar */
+.navbar__list {
+    list-style-type: none; /* Supprime les puces */
+    display: flex; /* Affiche les éléments en ligne */
+    justify-content: space-around; /* Espace uniforme entre les éléments */
+}
+
+/* Éléments de la navbar */
+.navbar__item {
+    margin: 0 15px; /* Espacement entre les éléments */
+}
+
+/* Liens de la navbar */
+.navbar__link {
+    color: white; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    padding: 8px 16px; /* Espacement autour du texte */
+    border-radius: 4px; /* Coins arrondis */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Effet au survol des liens */
+.navbar__link:hover {
+    background-color: #555; /* Couleur de fond au survol */
+    width:550px;
+    height: 550px;
+    transform: scale(1.1);
+
+}
+section{
+    color:white;
+    margin-top: 50px;
+}
+
+#home{
+    background-image: url("../_images/aflem.jpg");
+    height: 450px;
+    padding-right:50px; ;
+    border-color: white;
+    border-width:5px ;
+    border-style:solid;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+.box-container {
+    display: flex; /* Utiliser flexbox pour aligner les boîtes en ligne */
+    justify-content: space-around; /* Espacer les boîtes uniformément */
+    margin-top: 180px; /* Espacement supérieur */
+}
+
+/* Style pour chaque boîte */
+.box {
+     /* Dégradé de bleu à noir */
+    border: 1px solid #ddd; /* Bordure */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 20px; /* Espacement interne */
+    width: 30%; /* Largeur de chaque boîte */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre pour effet de profondeur */
+    transition: transform 0.3s; /* Transition douce pour l'effet au survol */
+    margin:20px;
+}
+#i1{
+    background: linear-gradient(to right, #1D529D, #120C1F);
+}
+#i2{
+    background: linear-gradient(to right, #792A95,#120C1F);
+}
+#i3{
+    background: linear-gradient(to right, #922556, #120C1F);
+}
+
+#i1>h3{
+    background: linear-gradient(to right, #1D529D, #120C1F);
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+#i2>h3{
+    background: linear-gradient(to right, #792A95,#120C1F);
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+#i3>h3{
+    background: linear-gradient(to right, #922556, #120C1F);
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+#i1>p{
+    background: linear-gradient(to right, #1D529D, #120C1F);
+    font-size: 15px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+#i2>p{
+    background: linear-gradient(to right, #792A95,#120C1F);
+    font-size: 15px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+#i3>p{
+    background: linear-gradient(to right, #922556, #120C1F);
+    font-size: 15px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+
+/* Effet d'agrandissement au survol des boîtes */
+.box:hover {
+    transform: scale(1.05); /* Agrandir légèrement au survol */
+}
+
+/* Style pour le bouton */
+button {
+    background-color: #007bff; /* Couleur du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none; /* Supprime la bordure */
+    border-radius: 4px; /* Coins arrondis du bouton */
+    padding: 10px 15px; /* Espacement interne du bouton */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background-color 0.3s; /* Transition douce pour le changement de couleur */
+}
+
+/* Changement de couleur au survol du bouton */
+button:hover {
+    background-color: #0056b3; /* Couleur plus foncée au survol */
+}
+
+
+
+#movies {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #222; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    width:70%;
+    background-color: transparent;
+    margin-left:20px ;
+}
+
+
+
+.movie-box ,.music-box{
+    min-width: 200px; /* Largeur minimale des boîtes */
+    margin: 0 10px; /* Marge entre les boîtes */
+    background-color: #333; /* Couleur de fond des boîtes */
+    border-radius: 8px; /* Coins arrondis */
+    text-align: center; /* Centre le texte */
+    position: relative;
+    transition: opacity 0.6s ease;
+
+}
+.movie-box:hover > *:not(:hover),
+.music-box:hover > *:not(:hover){
+    opacity: 0.4;
+}
+
+.movie-box:hover ,.music-box:hover{
+    transform: scale(1.1);
+    
+    
+}
+.movie-box img:hover , .music-box img:hover{
+    transform: scale(1.05);
+
+}
+
+.movie-box:hover::after , .music-box:hover::after {
+    content: "En savoir plus"; /* Texte de description ou bouton */
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.movie-box img , .music-box img{
+    width: 100%; /* Image prend toute la largeur de la boîte */
+    border-radius: 8px 8px 0 0; /* Coins arrondis en haut */
+}
+
+
+
+.movie-box::after, .movie-box::before ,.music-box::after , .music-box::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-image: conic-gradient(transparent 80%,blue);
+    background-image: conic-gradient(angle 180deg,blue);
+    top:50%;
+    left:50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.movie-box::before , .music-box::before{
+    filter:blur(1.5rem);
+    opacity: 0.5;
+}
+
+
+
+.movies-container , .music-container {
+    display: flex;
+    /*overflow-x: auto; /* Permet le défilement horizontal */
+    padding: 10px 0;
+    scroll-behavior: smooth; /* Défilement doux */
+    /*border:solid,wheat;*/
+    width: 100%;
+    overflow: hidden;
+
+}
+
+
+.movies-container , .music-container{
+    display: flex;
+    overflow-x:scroll;
+    scroll-behavior: smooth;
+    gap: 20px; /* Optional spacing between movie boxes */
+    padding: 10px;
+    position: relative;
+}
+
+/* Hide scrollbar for Webkit browsers */
+/*.movies-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for other browsers */
+
+.movies-container , .music-container{
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+.movie-box , .music-box{
+    flex: 0 0 auto;
+    width: 200px; /* Adjust width as needed */
+    /* Additional styling for the movie boxes */
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.scroll-button.left {
+    left: 10px;
+}
+
+.scroll-button.right {
+    right: 10px;
+    position: relative;
+    left:1060px;
+    top:20px;
+}
+
+
+.right {
+    right: 10px; /* Position right */
+}
+
+#div_button{
+    position: absolute;
+    top:1010px;
+}
+#mv_cont{
+    text-align: left;
+    font-size: 30px;
+    font-style: italic;
+}
+#link_title{
+    text-decoration-line: none;
+    color:#790B14;
+    font-weight: bold;
+    font-size:40px ;
+    position:relative;
+    right: 120px;
+    bottom: 10px;
+
+}
+
+/* Style pour le modal */
+.modal {
+    display: none; /* Cacher par défaut */
+    position: fixed; /* Le modal sera positionné en haut à gauche de l'écran */
+    z-index: 1; /* Placer le modal au-dessus du contenu */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre */
+}
+
+/* Contenu du modal */
+.modal-content {
+    position: relative;
+    margin: 15% auto;
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    height: 80%;
+    max-width: 900px;
+}
+
+/* Style du bouton de fermeture */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Lorsque le modal est ouvert */
+.modal iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+.feature {
+    border-top: 8px solid #222;
+    padding: 2rem 1rem;
+  }
+  .feature__details {
+    text-align: center;
+  }
+  .feature__title {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  .feature__sub__title {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .feature__image__container {
+    width: 100%;
+    position: relative;
+  }
+  .feature__image {
+    width: 100%;
+  }
+  .feature__backgroud__video__container,.feature__backgroud__video__container2 {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: 13%;
+    height: 100%;
+    max-width: 73%;
+    max-height: 54%;
+    z-index: -2;
+  }
+  .feature__backgroud__video,.feature__backgroud__video__container2 {
+    width: 100%;
+  }
+  .feature__2__poster__container {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 15em;
+    max-width: 16em;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border: 1px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    height: 50px;
+    height: 60px;
+    padding: 0.25rem 0.6rem;
+    gap: 15px;
+  }
+  
+  .poster__container {
+    width: 30%;
+    width: 20%;
+  }
+  
+  .poster {
+    width: 100%;
+    height: 100%;
+  }
+  .poster__details {
+    width: 50%;
+    width: 60%;
+  }
+  .poster__details > h4 {
+    font-size: 13px;
+    font-weight: 600;
+    font-weight: 500;
+  }
+  .poster__details > h6 {
+    font-size: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(63, 63, 246);
+  }
+  
+  
+  .feature__3__backgroud__video__container {
+    max-width: 63%;
+    max-height: 47%;
+    z-index: -2;
+    top: 9%;
+    left: 19%;
+  }
+  
+  .FAQ__accordian {
+    width: 100%;
+  }
+  .FAQ__title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    font-size: 18px;
+    background-color: #303030;
+    border: 1px solid #303030;
+    color: white;
+  }
+  
+  .FAQ__visible {
+    background-color: #303030;
+    border-top: 1px solid black;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+  .FAQ__visible > p {
+    margin: 1rem;
+  }
+  .FAQ__list__container {
+    border-top: 8px solid #222;
+    padding: 2rem 0;
+  }
+  .FAQ__heading {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin: 1rem 3rem;
+  }
+  
+  .FAQ__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .FAQ__get__started__email {
+    text-align: center;
+  }
+  
+  .FAQ__get__started__email > h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 2rem 0;
+  }
+  
+  footer {
+    border-top: 8px solid #333;
+    padding: 2rem 1rem;
+    color: #757575;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .footer__row__2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .footer__row__1 > h4 {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+  .footer__row__3 > .dropdown__container {
+    width: fit-content;
+    border: 1px solid #757575;
+    color: #757575;
+  }
+  
+  .footer__row__3 > .dropdown__container > .language__drop__down {
+    color: #757575;
+  }
+  
+  @media (min-width: 768px) {
+    .hero__bg__image__container {
+      height: 100vh;
+    }
+    .hero__bg__overlay {
+      height: 100vh;
+    }
+    .hero__card {
+      top: 40%;
+      left: 30%;
+      transform: translate(-20%, -20%);
+    }
+    .hero__title {
+      font-size: 3rem;
+    }
+    .hero__subtitle,
+    .hero__description {
+      font-size: 1.3rem;
+    }
+    .feature {
+      padding: 4rem;
+    }
+    .feature__title {
+      font-size: 35px;
+    }
+    .feature__sub__title {
+      font-size: 20px;
+    }
+    .feature__2__poster__container {
+      max-width: 26em;
+      height: 85px;
+    }
+    .poster__container {
+      width: 15%;
+    }
+    .download__gif__container {
+      width: 3rem;
+      height: 3rem;
+    }
+  
+    .poster__details > h4 {
+      font-size: 18px;
+    }
+    .poster__details > h6 {
+      font-size: 14px;
+    }
+    .FAQ__title {
+      font-size: 20px;
+    }
+    .FAQ__heading {
+      font-size: 38px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    .FAQ__list {
+      padding: 1rem 5rem;
+    }
+    .FAQ__get__started__email {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transform: translateX(15%);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .navbar {
+      padding: 2% 5%;
+    }
+    .navbar__brand {
+      width: 150px;
+    }
+    .signin__button {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+    .dropdown__container {
+      padding: 10px 5px;
+    }
+    .navbar__nav__items {
+      gap: 30px;
+    }
+    .hero__card {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .form__container {
+      width: 50%;
+    }
+    .email__form__container {
+      flex-direction: row;
+      align-items: center;
+      gap: 1px;
+    }
+    .primary__button {
+      height: 50px;
+    }
+    .feature {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .feature__details {
+      text-align: left;
+      padding: 0 6rem;
+    }
+    .feature__title {
+      font-size: 50px;
+    }
+    .feature__sub__title {
+      font-size: 25px;
+    }
+    .feature__image__container {
+      max-width: 500px;
+    }
+    .feature:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  
+    .feature__2__poster__container {
+      max-width: 20em;
+      height: 100px;
+      padding: 1rem;
+    }
+    .poster__container {
+      width: 20%;
+    }
+    .FAQ__list {
+      padding: 1rem 25rem;
+    }
+    .FAQ__get__started__email {
+      transform: translateX(16%);
+    }
+    footer {
+      padding: 2rem 25rem;
+      justify-content: flex-start;
+      text-align: left;
+      align-items: flex-start;
+    }
+  
+    .footer__row__2 {
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+    }
+  
+    .footer__row__1,
+    .footer__row__3,
+    .footer__row__4 {
+      align-self: flex-start;
+    }
+  }
+  
+  @media (min-width: 1254px) {
+  }
+  
+  
+  .feature__backgroud__video__container2{
+      position:relative;
+      top: -200px;
+      width:80%;
+      border-radius: 30%;
+      height: 90px;
+  }
+  
+  .feature__backgroud__video2 {
+      width: 100%;
+      height: 800%;
+      object-fit: cover; /* Pour que la vidéo prenne toute la hauteur du conteneur sans déformation */
+      border-radius: 10px;
+    }
+
+
+
+
+
